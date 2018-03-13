@@ -1,15 +1,39 @@
 <html>
-
 <head>
-  <link rel="stylesheet" href="index.css">
+<style>
+.item1 {grid-area: header;}
+.item2 { grid-area: header; }
+.item3 { grid-area: menu; }
+.item4 { grid-area: main; }
+.item5 { grid-area: right; }
+.item6 { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
 </head>
 <body>
+
 <div class="grid-container">
   <div class="item1">Header</div>
   <div class="item2">Menu</div>
-  <div class="item3">Main</div>  
-  <div class="item4">Right</div>
-  <div class="item5">Footer</div> Nunc gravida velit sit amet elit tristique, sed sagittis dui imperdiet. Aliquam interdum mattis volutpat. Integer nec velit volutpat, mollis sem et, malesuada quam. Fusce quis enim vel dui consectetur tincidunt at id lectus. Nullam sed dolor congue velit venenatis feugiat. In commodo maximus risus maximus tincidunt. Nulla egestas mauris a ante imperdiet tristique. In hac habitasse platea dictumst. Etiam massa urna, convallis eget arcu eu, dapibus dictum ipsum. Duis efficitur, leo semper fringilla lobortis, nibh lacus posuere eros, eget finibus massa mauris id ante. Pellentesque molestie magna in pellentesque porta.
+  <div class="item3">Navigation</div>
+  <div class="item4">Main</div>  
+  <div class="item5">Right</div>
+  <div class="item6">Footer</div>
 </div>
 
 </body>
